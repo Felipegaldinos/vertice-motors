@@ -1,11 +1,14 @@
 import React from 'react';
 import { ArrowRight, CarFront, ShieldCheck, CircleDollarSign } from 'lucide-react';
+import { images } from '../data/vehicles';
+
+const serviceImages = { finance: images.bmw, sell: images.porsche, insurance: images.audi };
 
 export default function Services({
   open,
 }) {
 
-  return (<><section className="services container" id="services">
+  return (<><section className="services-band" id="services"><div className="services container">
           <div className="section-heading">
             <div>
               <div className="overline">A VERTICE VAI COM VOCÊ</div>
@@ -33,14 +36,14 @@ export default function Services({
                 ShieldCheck,
                 "Tranquilidade em cada quilômetro",
                 "Encontre os cuidados que seu carro merece.",
-                "Conhecer serviços",
-                "care",
+                "Conhecer seguros",
+                "insurance",
               ],
             ].map(([Icon, title, desc, cta, action]) => (
               <button
                 className="service-card"
                 key={action}
-                onClick={() => open(action)}
+                onClick={() => action === 'insurance' ? window.location.hash = '/seguros' : open(action)}
               >
                 <span className="service-icon">
                   <Icon size={26} />
@@ -51,8 +54,9 @@ export default function Services({
                   {cta}
                   <ArrowRight size={17} />
                 </span>
+                <img className="service-visual" src={serviceImages[action]} alt="" loading="lazy" width="600" height="340" />
               </button>
             ))}
           </div>
-        </section></>);
+        </div></section></>);
 }

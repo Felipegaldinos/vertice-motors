@@ -11,8 +11,16 @@ import SellBanner from './components/SellBanner';
 import Footer from './components/Footer';
 import CookieNotice from './components/CookieNotice';
 import ModalRouter from './components/ModalRouter';
+import BrandShowcase from './components/BrandShowcase';
+import InstitutionalPreview from './components/InstitutionalPreview';
+import AboutPage from './pages/AboutPage';
+import InsurancePage from './pages/InsurancePage';
+import { useSiteNavigation } from './hooks/useSiteNavigation';
+import './institutional.css';
+import './visual-refresh.css';
 
 export default function App() {
+  const { page, showInventory } = useSiteNavigation();
   const {
     tab,
     setTab,
@@ -53,9 +61,11 @@ export default function App() {
     open,
     search,
     cars,
-  } = useMarketplace();
+  } = useMarketplace(showInventory);
 return (<>
       <Header
+        page={page}
+        showInventory={showInventory}
         setQuery={setQuery}
         setBrand={setBrand}
         setMax={setMax}
@@ -64,13 +74,13 @@ return (<>
         setResults={setResults}
         menu={menu}
         setMenu={setMenu}
-        user={user}
         favorites={favorites}
         setOnlyFavorites={setOnlyFavorites}
         open={open}
         search={search}
       />
       <main>
+        {page === 'about' ? <AboutPage /> : page === 'insurance' ? <InsurancePage onInterest={name => open('contact', { model: name, inquiryType: 'insurance' })} /> : <>
         <Hero setResults={setResults} />
         <VehicleSearch
         tab={tab}
@@ -112,8 +122,14 @@ return (<>
         cars={cars}
       />
         <Services open={open} />
+        <BrandShowcase onSelectBrand={selectedBrand => {
+          setQuery(''); setMax(''); setCity(''); setTab('Carros');
+          setBrand(selectedBrand); search('Todos');
+        }} />
+        <InstitutionalPreview />
         <Discover setTab={setTab} search={search} />
         <SellBanner open={open} />
+        </>}
       </main>
       <Footer open={open} />
       <CookieNotice cookies={cookies} setCookies={setCookies} open={open} />

@@ -19,7 +19,9 @@ export default function InquiryForm({
                     ? "Uma nova história para seu veículo."
                     : modal === "login"
                       ? "Bem-vindo à sua próxima história."
-                      : `Gostou do ${selected?.model}?`}
+                      : selected?.inquiryType === 'insurance'
+                        ? `Saiba mais: ${selected.model}`
+                        : `Gostou do ${selected?.model}?`}
                 </h2>
                 <p>
                   {modal === "sell"

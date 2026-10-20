@@ -5,6 +5,9 @@ export default function Footer({
 }) {
 
   return (<><footer>
+        <nav className="container institutional-footer-nav" aria-label="Navegação institucional">
+          <a href="#/sobre">Sobre nós</a><a href="#/sobre/equipe">Equipe</a><a href="#/sobre/valores">Nossos valores</a><a href="#marcas">Marcas</a><a href="#/seguros">Seguros</a><a href="#inventory">Veículos</a>
+        </nav>
         <div className="container footer-top">
           <a href="#" className="logo">
             <span className="logo-symbol">V /</span>

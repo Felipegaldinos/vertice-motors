@@ -3,7 +3,7 @@ import { initialCars } from '../data/vehicles';
 import { filterVehicles } from '../utils/vehicles';
 import { readStorage, useLocalStorage } from './useLocalStorage';
 
-export function useMarketplace() {
+export function useMarketplace(showInventory = () => {}) {
   const [tab, setTab] = useState("Carros"),
     [query, setQuery] = useState(""),
     [brand, setBrand] = useState(""),
@@ -40,6 +40,8 @@ export function useMarketplace() {
     setCategory(cat);
     setResults(true);
     setOnlyFavorites(false);
+    setMenu(false);
+    showInventory();
     setTimeout(
       () =>
         document

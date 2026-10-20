@@ -17,6 +17,14 @@ node tests/render-components.mjs
 npm run build
 ```
 
+## Páginas institucionais
+
+- `#/sobre`: apresentação, valores e áreas da equipe; atalhos `#/sobre/valores` e `#/sobre/equipe`.
+- `#/seguros`: modalidades de proteção, etapas de escolha e perguntas frequentes.
+- A inicial inclui marcas que filtram o catálogo e um resumo institucional.
+- `src/data/institutional.js` concentra os textos, áreas da equipe, marcas e modalidades de seguro. Nomes de profissionais, seguradoras parceiras e produtos reais devem ser inseridos após confirmação.
+- A navegação por hash funciona na hospedagem estática e permite voltar ao catálogo de qualquer página, sem perder os favoritos.
+
 ## Organização
 
 - `src/main.jsx`: inicialização do React e importação do CSS.
