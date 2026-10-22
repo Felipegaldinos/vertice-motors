@@ -42,3 +42,12 @@ npm run build
 Para modificar um anúncio, edite `data/vehicles.js`. Para alterar o card, edite `VehicleCard.jsx`. Para mudar a simulação, edite `FinanceSimulator.jsx` e `utils/financing.js`. Novas telas de modal são compostas em `ModalRouter.jsx`.
 
 Anúncios, formulários e simulações são demonstrativos; não enviam propostas nem processam financiamentos reais.
+
+## Identidade visual e fotografias
+
+- `src/dealership-theme.css` reúne a paleta final com faixas vermelhas, superfícies claras e blocos grafite. É importado após os demais estilos.
+- `src/data/media.js` centraliza as 21 imagens da concessionária fictícia, com fotografias exclusivas por seção.
+- Os arquivos finais estão em `public/images/dealership/`, em JPEG otimizado.
+- `public/images/dealership/PROMPTS.json` registra os prompts da ferramenta integrada de geração de imagens.
+- Banners, catálogo, equipe, seguros e cards usam esse mesmo acervo. Os logos das marcas foram preservados.
+- Para validar os arquivos de imagem: `node --test tests/media.test.js`.

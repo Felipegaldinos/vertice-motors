@@ -16,7 +16,7 @@ export default function InstitutionalPreview() {
       </div>
       </div>
       <div className="institutional-preview-photo">
-        <img src={images.mercedes} alt="Mercedes-Benz da seleção Vertice Motors" loading="lazy" width="900" height="750" />
+        <img src={images.homeAbout} alt="Consultora recebendo clientes na concessionária fictícia Vertice Motors" loading="lazy" width="1536" height="1024" />
         <div><span>VERTICE MOTORS</span><strong>A confiança move<br />novas histórias.</strong></div>
       </div>
     </section>

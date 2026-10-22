@@ -2,20 +2,21 @@ import React from 'react';
 import { ArrowUpRight, Eye, HeartHandshake, Sparkles, Handshake } from 'lucide-react';
 import PageIntro from '../components/PageIntro';
 import { values, team } from '../data/institutional';
+import { dealershipImages } from '../data/media';
 
 const valueIcons = { transparency: Eye, respect: HeartHandshake, care: Sparkles, relationship: Handshake };
 
 export default function AboutPage() {
   return (
     <>
-      <PageIntro image="/images/about/sobre-carros.jpg" label="CONHEÇA A VERTICE MOTORS" title={<>Novos caminhos começam<br />com boas relações.</>} description="Nossa paixão é por carros. Nosso compromisso é com as pessoas que vão dirigir cada história.">
+      <PageIntro image={dealershipImages.showroom} label="CONHEÇA A VERTICE MOTORS" title={<>Novos caminhos começam<br />com boas relações.</>} description="Nossa paixão é por carros. Nosso compromisso é com as pessoas que vão dirigir cada história.">
         <div className="page-shortcuts"><a href="#/sobre/valores">Nossos valores ↗</a><a href="#/sobre/equipe">Nossa equipe ↗</a></div>
       </PageIntro>
       <section className="about-story container">
         <div>
           <div className="overline">SOBRE NÓS</div>
           <h2>O melhor caminho é aquele<br />que faz sentido para você.</h2>
-          <img className="about-story-image" src="/images/about/sobre-carros.jpg" alt="Carro esportivo branco em um showroom com outros veículos ao fundo" loading="lazy" width="1800" height="1063" />
+          <img className="about-story-image" src={dealershipImages.aboutStory} alt="Vista da recepção e dos veículos no showroom fictício da Vertice Motors" loading="lazy" width="1536" height="1024" />
         </div>
         <div className="about-story-copy"><p>A Vertice Motors nasce de uma ideia simples: escolher um veículo deve ser uma experiência tão boa quanto dirigir. Queremos aproximar pessoas de carros que combinam com seus planos, sua rotina e seu jeito de viver.</p><p>Valorizamos o tempo de cada cliente e uma conversa sem complicação. Da descoberta do modelo à entrega das chaves, nossa proposta é tornar cada etapa mais clara, próxima e cuidadosa.</p></div>
       </section>

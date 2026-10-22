@@ -1,14 +1,6 @@
-const photo = (id, w = 900) =>
-  `https://images.unsplash.com/${id}?auto=format&fit=crop&w=${w}&q=85`;
-export const images = {
-  hero: photo("photo-1503376780353-7e6692767b70", 1800),
-  porsche: photo("photo-1503376780353-7e6692767b70"),
-  bmw: photo("photo-1555215695-3004980ad54e"),
-  mercedes: photo("photo-1618843479313-40f8afb4b4d8"),
-  audi: photo("photo-1606664515524-ed2f786a0bd6"),
-  jeep: photo("photo-1519641471654-76ce0107ad1b"),
-  moto: photo("photo-1558981806-ec527fa84c39"),
-};
+import { dealershipImages } from './media.js';
+
+export const images = dealershipImages;
 export const initialCars = [
   {
     id: 1,

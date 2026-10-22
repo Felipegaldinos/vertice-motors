@@ -21,19 +21,19 @@ export default function Discover({
                 "Para ir além",
                 "SUVs para todos os caminhos",
                 "SUV",
-                images.jeep,
+                images.categorySuv,
               ],
               [
                 "Para sentir a estrada",
                 "Esportivos que despertam emoções",
                 "Esportivo",
-                images.porsche,
+                images.categorySport,
               ],
               [
                 "Para viver o dia a dia",
                 "Conforto em cada trajeto",
                 "Sedã",
-                images.mercedes,
+                images.categorySedan,
               ],
             ].map(([title, desc, type, img]) => (
               <button

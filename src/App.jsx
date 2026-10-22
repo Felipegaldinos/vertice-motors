@@ -18,6 +18,7 @@ import InsurancePage from './pages/InsurancePage';
 import { useSiteNavigation } from './hooks/useSiteNavigation';
 import './institutional.css';
 import './visual-refresh.css';
+import './dealership-theme.css';
 
 export default function App() {
   const { page, showInventory } = useSiteNavigation();

@@ -2,7 +2,7 @@ import React from 'react';
 import { ArrowRight, CarFront, ShieldCheck, CircleDollarSign } from 'lucide-react';
 import { images } from '../data/vehicles';
 
-const serviceImages = { finance: images.bmw, sell: images.porsche, insurance: images.audi };
+const serviceImages = { finance: images.serviceFinance, sell: images.serviceSell, insurance: images.serviceInsurance };
 
 export default function Services({
   open,

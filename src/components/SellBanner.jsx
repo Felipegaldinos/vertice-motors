@@ -8,7 +8,7 @@ export default function SellBanner({
 }) {
 
   return (<><section className="sell-banner container">
-          <img className="sell-banner-photo" src={images.porsche} alt="" loading="lazy" width="700" height="450" />
+          <img className="sell-banner-photo" src={images.sellBanner} alt="" loading="lazy" width="700" height="450" />
           <div className="banner-icon">
             <KeyRound size={55} />
           </div>
